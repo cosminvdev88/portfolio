@@ -1,5 +1,6 @@
-import { FaLinkedin, FaInstagram, FaDownload } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaDownload, } from 'react-icons/fa';
 import { SiUpwork } from 'react-icons/si';
+import { CgFileDocument } from "react-icons/cg";
 
 const NavBar = () => {
   return (
@@ -19,10 +20,11 @@ const NavBar = () => {
         </a>
         <a
           href="/Cosminv.pdf"  // Ensure the CV is in the public folder
-          download="Cosminv_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-blue-300 text-2xl"
         >
-          <FaDownload /> {/* Download Icon */}
+          <CgFileDocument /> {/* Download Icon */}
           <span className='text-sm'>Resume</span>
         </a>
       </div>
