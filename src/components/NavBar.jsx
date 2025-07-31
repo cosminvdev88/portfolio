@@ -4,28 +4,43 @@ import { CgFileDocument } from "react-icons/cg";
 
 const NavBar = () => {
   return (
-    <nav className="mb-20 flex items-center justify-between py-6">
+    <nav className="mb-12 flex items-center justify-between py-4 px-4 sm:px-0">
       <div className="flex flex-shrink-0 items-center">
-        <h1 className='mx-2 text-[28px] font-semibold'>VC</h1>
+        <h1 className='text-2xl font-semibold sm:text-[28px]'>VC</h1>
       </div>
-      <div className='m-8 flex items-center justify-center gap-4 text-2xl'>
-        <a href="https://upwork.com" target="_blank" rel="noopener noreferrer">
+      <div className='flex items-center justify-center gap-3 text-xl sm:gap-4 sm:text-2xl'>
+        <a 
+          href="https://upwork.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-2 rounded-lg hover:bg-neutral-800 transition-colors"
+        >
           <SiUpwork />
         </a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a 
+          href="https://www.linkedin.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-2 rounded-lg hover:bg-neutral-800 transition-colors"
+        >
           <FaLinkedin />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <a 
+          href="https://www.instagram.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-2 rounded-lg hover:bg-neutral-800 transition-colors"
+        >
           <FaInstagram />
         </a>
         <a
-          href="/Cosminv.pdf"  // Ensure the CV is in the public folder
+          href="/Cosminv.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-blue-300 text-2xl"
+          className="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-neutral-800 transition-colors text-lg sm:text-xl"
         >
-          <CgFileDocument /> {/* Download Icon */}
-          <span className='text-sm'>Resume</span>
+          <CgFileDocument />
+          <span className='text-xs sm:text-sm'>Resume</span>
         </a>
       </div>
     </nav>

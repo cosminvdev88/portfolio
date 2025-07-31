@@ -80,10 +80,10 @@ const TechnologyIcon = memo(({ technology }) => {
             variants={iconVariants(duration)}
             initial='initial'
             animate='animate'
-            className="rounded-2xl border-4 border-neutral-800 p-4 hover:border-neutral-600 transition-colors duration-300"
+            className="rounded-xl border-2 border-neutral-800 p-3 hover:border-neutral-600 transition-colors duration-300 sm:rounded-2xl sm:border-4 sm:p-4"
             title={name}
         >
-            <Icon className={`text-7xl ${color}`} />
+            <Icon className={`text-4xl ${color} sm:text-5xl lg:text-7xl`} />
         </motion.div>
     )
 })
@@ -92,12 +92,12 @@ TechnologyIcon.displayName = 'TechnologyIcon'
 
 const Technologies = () => {
     return (
-        <div className="pb-24">
+        <div className="pb-16">
             <motion.h2
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: 1 }}
-                className="my-20 text-center text-4xl"
+                className="my-12 text-center text-3xl sm:text-4xl"
             >
                 Technologies
             </motion.h2>
@@ -106,7 +106,7 @@ const Technologies = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1.5 }}
-                className="flex flex-wrap items-center justify-center gap-4"
+                className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
             >
                 {technologies.map((tech, index) => (
                     <TechnologyIcon key={tech.name} technology={tech} />

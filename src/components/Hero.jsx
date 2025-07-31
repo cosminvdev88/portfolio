@@ -59,15 +59,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="pb-4 lg:mb-35">
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2 lg:pl-10">
-          <div className="flex flex-col items-center lg:items-start">
+    <div className="pb-8 lg:mb-20">
+      <div className="flex flex-col lg:flex-row lg:items-center">
+        <div className="w-full lg:w-1/2 lg:pr-8">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <motion.h1 
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-8 text-4xl font-thin tracking-tight sm:text-5xl lg:mt-8 lg:text-6xl xl:text-7xl"
             >
               Veliu Cosmin
             </motion.h1>
@@ -75,11 +75,11 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="bg-gradient-to-r from-pink-300 via-slate-500 py-2 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
+              className="bg-gradient-to-r from-pink-300 via-slate-500 py-2 to-purple-500 bg-clip-text text-2xl tracking-tight text-transparent sm:text-3xl lg:text-4xl"
             >
               {text}
               <span
-                className={`ml-1 inline-block w-2 bg-gray-800 ${showCursor ? 'opacity-100' : 'opacity-0'} 
+                className={`ml-1 inline-block w-1 bg-gray-800 sm:w-2 ${showCursor ? 'opacity-100' : 'opacity-0'} 
                 transition-opacity duration-300 ease-in-out`}
               >
                 &nbsp;
@@ -89,22 +89,21 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5, duration: 0.5 }}
-              className="my-2 max-w-xl py-6 font-light lg:text-xl"
+              className="my-4 max-w-xl py-4 leading-relaxed sm:text-base lg:text-lg"
             >
               {HERO_CONTENT}
             </motion.p>
           </div>
         </div>
         <div className="w-full lg:w-1/2">
-          <div className="flex justify-center pr-30">
+          <div className="flex justify-center lg:justify-end">
             <motion.img 
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 1 }}
               src={profile} 
               alt="profile" 
-              width={450}
-              className="rounded-2xl"
+              className="w-64 rounded-2xl sm:w-80 lg:w-96"
             />
           </div>
         </div>
